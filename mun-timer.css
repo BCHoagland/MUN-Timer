@@ -1,0 +1,103 @@
+:root {
+  --bg0: #111934;
+  --bg1: #2d2e60;
+}
+
+@keyframes slide-off-to-left {
+  from {transform: translate(-50%, -50%);}
+  to {transform: translate(-200%, -50%);}
+}
+
+@keyframes slide-off-to-right {
+  from {transform: translate(-50%, -50%);}
+  to {transform: translate(100%, -50%);}
+}
+
+@keyframes slide-on-from-left {
+  from {transform: translate(-200%, -50%);}
+  to {transform: translate(-50%, -50%);}
+}
+
+@keyframes slide-on-from-right {
+  from {transform: translate(100%, -50%);}
+  to {transform: translate(-50%, -50%);}
+}
+
+.off-screen-to-left {
+  animation: slide-off-to-left 1.4s;
+}
+
+.off-screen-to-right {
+  animation: slide-off-to-right 1.4s;
+}
+
+.on-screen-from-left {
+  animation: slide-on-from-left 1.4s;
+}
+
+.on-screen-from-right {
+  animation: slide-on-from-right 1.4s;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url('Lato-Thin.ttf');
+}
+
+html {
+  font: 4rem Lato;
+  color: white;
+  background-color: var(--bg1);
+}
+
+.container {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  text-align: center;
+}
+
+#types-container button {
+  margin: 0.4em 0 0.4em 0;
+  font-size: 1em;
+  display: block;
+}
+
+input, .timer {
+  background-color: var(--bg0);
+  color: white;
+  font: 0.8em Lato;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid white;
+  transition: border 0.2s;
+}
+
+input:focus {
+  border-bottom: 4px solid white;
+  outline: none;
+}
+
+button {
+  background-color: var(--bg1);
+  color: white;
+  font: 0.6rem Lato;
+  border: none;
+  margin: 0.5em auto;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+button:active {
+  opacity: 0.2;
+}

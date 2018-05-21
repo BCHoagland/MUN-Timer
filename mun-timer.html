@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="mun-timer.css"/>
+</head>
+<body>
+  <div id="types-container" class="container">
+    <button id="mod" onclick="selectType(0)">Mod</button>
+    <button id="unmod" onclick="selectType(1)">Unmod</button>
+    <button id="round-robin" onclick="selectType(2)">Round Robin</button>
+  </div>
+
+  <br/>
+  <br/>
+
+  <div id="inputs-container" class="container">
+    <input id="input0" class="input"></input>
+    <input id="input1" class="input"></input>
+    <button id="input-enter" onclick="enterInputs()">Enter</button>
+    <button id="input-exit" onclick="exit()">Back</button>
+  </div>
+
+  <br/>
+  <br/>
+
+  <div id="timers-container" class="container">
+    <div id="timer-title">Title</div>
+    <div id="timer0" class="timer">0</div>
+    <div id="timer1" class="timer">0</div>
+    <button id="start" onclick="start()">Start</button>
+    <button id="pause" onclick="pause()">Pause</button>
+    <button id="continue" onclick="cont()">Continue</button>
+    <button id="reset" onclick="reset()">Reset</button>
+    <button id="timer-exit" onclick="exit()">Back</button>
+  </div>
+  <script type="text/javascript" src="mun-timer.js"></script>
+
+  <div style="font-size: 14px;position: fixed; top: 20px;">
+    <div>TODO: animate text opacity, there's just a bug when pause/continue are pressed</div>
+    <div>TODO: display as min:sec instead of just seconds</div>
+</div>
+</body>
+</html>

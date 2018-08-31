@@ -281,7 +281,6 @@ function cont() {
 
 function reset() {
   if (document.getElementById("timer1").style.display != "none") {
-    setTimer(0, masterMaxTimes[0]);
     setTimer(1, masterMaxTimes[1]);
   } else {
     setTimer(0, masterMaxTimes[0]);

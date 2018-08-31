@@ -125,6 +125,7 @@ function animateOnTimers(str, n) {
   document.getElementById("timer-title").innerHTML = str;
   show("timer-title");
   show("start");
+  show("reset");
   show("timer-exit");
   animateOnFromRight("timers-container");
 }
@@ -261,6 +262,7 @@ function start() {
   startMasterTimer();
   hide("start");
   show("pause");
+  show("reset");
 }
 
 function pause() {
@@ -279,11 +281,13 @@ function cont() {
 
 function reset() {
   if (document.getElementById("timer1").style.display != "none") {
+    setTimer(0, masterMaxTimes[0]);
     setTimer(1, masterMaxTimes[1]);
   } else {
     setTimer(0, masterMaxTimes[0]);
   }
-  hide("reset");
+  pause();
+  hide("continue");
   show("start");
 }
 
